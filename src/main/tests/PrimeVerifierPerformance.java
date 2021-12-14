@@ -9,8 +9,8 @@ import src.main.prime_verifier.SolovayStrassen;
 public class PrimeVerifierPerformance extends AbstractTest {
 
     public static void test() throws PseudoRandomNumberException {
-        int[] amounts = {100, 80, 60, 40};
-        int[] sizes = {512, 1024, 2048, 4096};
+        int[] amounts = {100, 100, 100, 100, 100, 100, 100, 100, 80, 60, 40};
+        int[] sizes = {40, 56, 80, 128, 168, 224, 256, 512, 1024, 2048, 4096};
         XorShiftGenerator xorShiftGenerator = new XorShiftGenerator(10);
         PrimeVerifier millerRabin = new MillerRabin(xorShiftGenerator);
         PrimeVerifier solovayStrassen = new SolovayStrassen(xorShiftGenerator);

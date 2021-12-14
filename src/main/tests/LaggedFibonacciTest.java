@@ -11,8 +11,12 @@ public class LaggedFibonacciTest extends AbstractTest {
 
     public static void test() throws PseudoRandomNumberException {
         LaggedFibonacciGenerator laggedFibonacci = createLaggedFibonacci();
-        BigInteger integer = laggedFibonacci.createNumber(4096/8);
-        System.out.println("Número de 4096 bits gerado com LAGGED FIBONACCI : " + integer.toString());
+        int[] sizes = {40, 56, 80, 128, 168, 224, 256, 512, 1024, 2048, 4096};
+
+        for (int size : sizes) {
+            BigInteger integer = laggedFibonacci.createNumber(size/8);
+            System.out.println("Número de " + size + " bits gerado com LAGGED FIBONACCI : " + integer.toString());
+        }
     }
 
     private static void printLaggedFibonacciSeed() throws PseudoRandomNumberException {

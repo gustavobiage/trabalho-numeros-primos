@@ -11,15 +11,15 @@ public class Main {
         /* Pseudo Random Numbers */
         XorShiftTest.test();
         LaggedFibonacciTest.test();
-//        RandomNumberGeneratorPerformance.test();
-//
-//        /* Prime Verifiers */
-//        MillerRabinWithXorShift.test();
-//        MillerRabinWithLaggedFibonacci.test();
-//
-//        SolovayStrassenWithXorShift.test();
-//        SolovayStrassenWithLaggedFibonacci.test();
-//
-//        PrimeVerifierPerformance.test();
+        RandomNumberGeneratorPerformance.test();
+
+        /* Prime Verifiers */
+        MillerRabinWithXorShift.test();
+        MillerRabinWithLaggedFibonacci.test();
+
+        SolovayStrassenWithXorShift.test();
+        SolovayStrassenWithLaggedFibonacci.test();
+
+        PrimeVerifierPerformance.test();
     }
 }

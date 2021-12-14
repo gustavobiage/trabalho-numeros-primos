@@ -9,7 +9,11 @@ public class XorShiftTest extends AbstractTest {
 
     public static void test() throws PseudoRandomNumberException {
         XorShiftGenerator xorShift = createXorShift();
-        BigInteger integer = xorShift.createNumber(4096/8);
-        System.out.println("Número de 4096 bits gerado com XORSHIFT : " + integer.toString());
+        int[] sizes = {40, 56, 80, 128, 168, 224, 256, 512, 1024, 2048, 4096};
+
+        for (int size : sizes) {
+            BigInteger integer = xorShift.createNumber(size/8);
+            System.out.println("Número de " + size + " bits gerado com XORSHIFT : " + integer.toString());
+        }
     }
 }
